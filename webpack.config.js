@@ -1,13 +1,22 @@
-const HtmlPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const { resolve } = require('path');
+const { resolve } = require('path')
 
-const context = resolve(__dirname, 'src');
+const context = resolve(__dirname, 'src')
 
 module.exports = {
+  entry: './src/index.js',
   output: {
+    path: __dirname + '/public',
     publicPath: '/',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'React, Tailwind and Webpack 5 Boilerplate',
+      favicon: './src/assets/favicon.svg',
+      template: './public/index.html',
+    })
+  ],
   module: {
     rules: [
       {
@@ -40,10 +49,9 @@ module.exports = {
     },
   },
 
-  plugins: [
-    new HtmlPlugin({
-      title: 'React, Tailwind and Webpack 5 Boilerplate',
-      favicon: './src/assets/favicon.svg',
-    }),
-  ],
+  
+  devServer : {
+    port: 3000,
+    historyApiFallback: true
+}
 };
