@@ -1,3 +1,5 @@
+//Hola!
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssNano = require('cssnano');
 const { EnvironmentPlugin } = require('webpack');
