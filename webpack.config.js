@@ -5,6 +5,7 @@ const { resolve } = require('path');
 const context = resolve(__dirname, 'src');
 
 module.exports = {
+  entry: './src/index.js',
   output: {
     publicPath: '/',
   },
@@ -43,6 +44,7 @@ module.exports = {
   plugins: [
     new HtmlPlugin({
       title: 'React, Tailwind and Webpack 5 Boilerplate',
+      template: './public/index.html',
       favicon: './src/assets/favicon.svg',
     }),
   ],

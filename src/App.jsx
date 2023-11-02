@@ -17,6 +17,7 @@ const App = () => (
       </Suspense>
     </Layout>
   </Router>
+
 );
 
 export default App;
