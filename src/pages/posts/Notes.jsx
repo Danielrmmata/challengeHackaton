@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import NotesList from "./components/NotesList";
-import Search from "./components/Search";
-import Header from "./components/Header";
+import Search from "../../components/Search";
+// import Header from "../../components/Header";
 
 const Posts = () => {
   const [notes, setNotes] = useState([]);
@@ -35,14 +35,14 @@ const Posts = () => {
     setNotes(newNotes);
   };
 
-const editNote = (data) => {
-  let tmp = [...notes];
-  const index = tmp.findIndex((note) => note.id === data.id);
-  if (index > -1) {
-    tmp.splice(index, 1, data);
-    setNotes(tmp);
+  const editNote = (data) => {
+    let tmp = [...notes];
+    const index = tmp.findIndex((note) => note.id === data.id);
+    if (index > -1) {
+      tmp.splice(index, 1, data);
+      setNotes(tmp);
+    }
   }
-}
 
   const deleteNote = (id) => {
     const newNotes = notes.filter((note) => note.id !== id);
