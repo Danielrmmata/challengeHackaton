@@ -48,4 +48,9 @@ module.exports = {
       favicon: './src/assets/favicon.svg',
     }),
   ],
+  devServer: {
+    port: 5000,
+    historyApiFallback: true,
+},
 };
+
