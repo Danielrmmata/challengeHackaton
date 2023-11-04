@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Tag from "./Tag";
+import Tag from "../Tag/Tag";
 
 const AddNote = ({ handleAddNote, defaultState }) => {
   const [data, setData] = useState(defaultState || { title: "", text: "", tags: [] });

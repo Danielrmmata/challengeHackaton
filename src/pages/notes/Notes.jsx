@@ -4,7 +4,7 @@ import NotesList from "./components/NotesList";
 import Search from "../../components/Search";
 // import Header from "../../components/Header";
 
-const Posts = () => {
+const Notes = () => {
   const [notes, setNotes] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [tagFilter, setTagFilter] = useState(null);
@@ -87,4 +87,4 @@ const Posts = () => {
   );
 };
 
-export default Posts;
+export default Notes;
