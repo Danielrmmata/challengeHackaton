@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
-import NoteView from "./NoteView";
-import NoteForm from "./NoteForm";
+import NoteView from "../NoteView";
+import NoteForm from "../NoteForm/NoteForm";
 
 const Note = ({ note, handleDeleteNote, handleEditNote }) => {
   const [editing, setEditing] = useState(false);
