@@ -1,5 +1,5 @@
-import Note from "./Note";
-import NoteForm from "./NoteForm";
+import Note from "../components/Note";
+import NoteForm from "../components/NoteForm";
 
 const NotesList = ({ notes, handleAddNote, handleDeleteNote, handleEditNote }) => {
   return (
